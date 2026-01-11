@@ -1,0 +1,96 @@
+/* 分类页面样式 */
+
+/* 分类容器 */
+.category-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    min-height: 600px;
+}
+
+/* 左侧分类列表 */
+.category-left {
+    width: 200px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 30px;
+    overflow-y: auto;
+}
+
+/* 分类项 */
+.category-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.category-item:hover {
+    background-color: #ff6700;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.category-item.active {
+    background-color: #ff6700;
+    color: #fff;
+    border-color: #ff5722;
+}
+
+/* 右侧商品列表 */
+.category-right {
+    flex: 1;
+}
+
+/* 分类标题 */
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6700;
+}
+
+/* 商品列表 */
+.category .goods-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .category-container {
+        flex-direction: column;
+    }
+    
+    .category-left {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .category-item {
+        white-space: nowrap;
+        margin-right: 10px;
+        margin-bottom: 0;
+        min-width: 120px;
+    }
+    
+    .category .goods-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}

@@ -1,0 +1,260 @@
+/* 用户中心页面样式 */
+
+/* 用户信息区域 */
+.user-info {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #ff6700;
+}
+
+.user-info-text {
+    flex: 1;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6700;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 订单区域 */
+.order-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.more {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+}
+
+.more:hover {
+    color: #ff6700;
+}
+
+/* 订单列表 */
+.order-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.order-item:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-5px);
+}
+
+.order-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.order-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 功能区域 */
+.function-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* 功能列表 */
+.function-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.function-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.function-item:last-child {
+    border-bottom: none;
+}
+
+.function-item:hover {
+    color: #ff6700;
+    transform: translateX(5px);
+}
+
+.function-icon {
+    font-size: 24px;
+    margin-right: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.function-text {
+    flex: 1;
+    font-size: 16px;
+}
+
+.function-arrow {
+    font-size: 20px;
+    color: #ccc;
+}
+
+/* 登录提示 */
+.login-prompt {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.login-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+/* 退出登录区域 */
+.logout-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.02);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .user-avatar {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .user-stats {
+        justify-content: center;
+    }
+    
+    .order-list {
+        flex-wrap: wrap;
+    }
+    
+    .order-item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .more {
+        margin-top: 10px;
+    }
+    
+    .btn-danger {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+/* 首页特定样式 */
+
+/* 商品列表样式 */
+.goods-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 商品操作按钮 */
+.goods-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goods-actions .btn {
+    flex: 1;
+    margin: 0 5px;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .header-right {
+        justify-content: center;
+    }
+    
+    .banner {
+        height: 200px;
+    }
+    
+    .goods-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .goods-image {
+        height: 150px;
+    }
+    
+    .goods-title {
+        font-size: 14px;
+    }
+    
+    .goods-price {
+        font-size: 18px;
+    }
+    
+    .goods-actions {
+        flex-direction: column;
+    }
+    
+    .goods-actions .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

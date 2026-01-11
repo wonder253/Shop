@@ -1,0 +1,165 @@
+/* 商品详情页样式 */
+
+/* 商品详情容器 */
+.goods-detail {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* 商品图片 */
+.goods-images {
+    width: 40%;
+    padding-right: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 商品信息 */
+.goods-info-detail {
+    flex: 1;
+    min-width: 300px;
+}
+
+.goods-title-detail {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.goods-price-detail {
+    font-size: 36px;
+    color: #ff6700;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.goods-desc-detail {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* 购买数量 */
+.buy-count {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.count-label {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.count-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 120px;
+}
+
+.count-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.count-value {
+    width: 40px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* 购买按钮 */
+.buy-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.buy-actions .btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 商品详情内容 */
+.goods-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.content-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6700;
+}
+
+.content-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .goods-images {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .main-image {
+        height: 250px;
+    }
+    
+    .goods-title-detail {
+        font-size: 24px;
+    }
+    
+    .goods-price-detail {
+        font-size: 30px;
+    }
+    
+    .buy-actions {
+        flex-direction: column;
+    }
+    
+    .buy-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

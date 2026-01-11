@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">购物商城</h1>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索商品">
+                <button class="search-btn">搜索</button>
+            </div>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">购物车 <span class="cart-count">0</span></a>
+                <a href="user.html" class="user-link">我的</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主导航 -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="category.html" class="nav-item">分类</a>
+            <a href="cart.html" class="nav-item">购物车</a>
+            <a href="user.html" class="nav-item active">我的</a>
+        </div>
+    </nav>
+
+    <!-- 用户中心内容 -->
+    <div class="container">
+        <!-- 用户信息 -->
+        <div class="user-info" id="userInfo">
+            <!-- 用户信息将通过JavaScript动态生成 -->
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="order-section">
+            <div class="section-header">
+                <h3 class="section-title">我的订单</h3>
+                <a href="#" class="more">查看全部</a>
+            </div>
+            <div class="order-list">
+                <a href="#" class="order-item">
+                    <div class="order-icon">📦</div>
+                    <div class="order-text">待付款</div>
+                </a>
+                <a href="#" class="order-item">
+                    <div class="order-icon">🚚</div>
+                    <div class="order-text">待发货</div>
+                </a>
+                <a href="#" class="order-item">
+                    <div class="order-icon">📤</div>
+                    <div class="order-text">待收货</div>
+                </a>
+                <a href="#" class="order-item">
+                    <div class="order-icon">⭐</div>
+                    <div class="order-text">待评价</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 功能列表 -->
+        <div class="function-section">
+            <div class="section-header">
+                <h3 class="section-title">我的功能</h3>
+            </div>
+            <div class="function-list">
+                <a href="#" class="function-item">
+                    <div class="function-icon">🎁</div>
+                    <div class="function-text">我的优惠券</div>
+                    <div class="function-arrow">></div>
+                </a>
+                <a href="#" class="function-item">
+                    <div class="function-icon">❤️</div>
+                    <div class="function-text">我的收藏</div>
+                    <div class="function-arrow">></div>
+                </a>
+                <a href="#" class="function-item">
+                    <div class="function-icon">📍</div>
+                    <div class="function-text">收货地址</div>
+                    <div class="function-arrow">></div>
+                </a>
+                <a href="#" class="function-item">
+                    <div class="function-icon">⚙️</div>
+                    <div class="function-text">设置</div>
+                    <div class="function-arrow">></div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 退出登录按钮 -->
+        <div class="logout-section">
+            <button class="btn btn-danger" onclick="logout()">退出登录</button>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 购物商城. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/user.js"></script>
+</body>
+</html>

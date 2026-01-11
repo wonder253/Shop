@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">购物商城</h1>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索商品">
+                <button class="search-btn">搜索</button>
+            </div>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">购物车 <span class="cart-count">0</span></a>
+                <a href="user.html" class="user-link">我的</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主导航 -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="category.html" class="nav-item active">分类</a>
+            <a href="cart.html" class="nav-item">购物车</a>
+            <a href="user.html" class="nav-item">我的</a>
+        </div>
+    </nav>
+
+    <!-- 分类内容 -->
+    <div class="container">
+        <h2 class="section-title">商品分类</h2>
+        
+        <div class="category-container">
+            <!-- 左侧分类列表 -->
+            <div class="category-left" id="categoryLeft">
+                <!-- 分类列表将通过JavaScript动态生成 -->
+            </div>
+            
+            <!-- 右侧商品列表 -->
+            <div class="category-right">
+                <div class="category-title" id="currentCategoryName">商品分类</div>
+                <div class="goods-list" id="categoryGoodsList">
+                    <!-- 商品列表将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 购物商城. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/category.js"></script>
+</body>
+</html>

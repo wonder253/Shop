@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册 - 购物商城</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        /* 选项卡样式 */
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            color: #ff6700;
+            border-bottom-color: #ff6700;
+        }
+        
+        .form-panel {
+            display: none;
+        }
+        
+        .form-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 登录容器 -->
+    <div class="login-container">
+        <!-- 登录卡片 -->
+        <div class="login-card">
+            <!-- 标题 -->
+            <div class="login-title">
+                <h2>购物商城</h2>
+                <p>登录或注册账号</p>
+            </div>
+            
+            <!-- 选项卡 -->
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('login')">登录</div>
+                <div class="tab" onclick="switchTab('register')">注册</div>
+            </div>
+            
+            <!-- 登录表单 -->
+            <div class="form-panel active" id="loginPanel">
+                <form class="login-form" id="loginForm" onsubmit="return login()">
+                    <!-- 用户名输入 -->
+                    <div class="form-group">
+                        <label for="username" class="form-label">用户名</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="username" class="form-input" placeholder="请输入用户名" required>
+                        </div>
+                    </div>
+                    
+                    <!-- 密码输入 -->
+                    <div class="form-group">
+                        <div class="password-header">
+                            <label for="password" class="form-label">密码</label>
+                            <a href="#" class="forgot-password">忘记密码？</a>
+                        </div>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="password" class="form-input" placeholder="请输入密码" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 记住我和登录按钮 -->
+                    <div class="form-footer">
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe" class="remember-checkbox">
+                            <label for="rememberMe" class="remember-label">记住我</label>
+                        </div>
+                    </div>
+                    
+                    <!-- 登录按钮 -->
+                    <button type="submit" class="login-btn">登录</button>
+                    
+                    <!-- 其他登录方式 -->
+                    <div class="other-login">
+                        <div class="divider">
+                            <span>其他登录方式</span>
+                        </div>
+                        <div class="login-icons">
+                            <a href="#" class="login-icon" onclick="otherLogin('phone')">📱</a>
+                            <a href="#" class="login-icon" onclick="otherLogin('wechat')">💬</a>
+                            <a href="#" class="login-icon" onclick="otherLogin('qq')">🔍</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- 注册表单 -->
+            <div class="form-panel" id="registerPanel">
+                <form class="login-form" id="registerForm" onsubmit="return register()">
+                    <!-- 用户名输入 -->
+                    <div class="form-group">
+                        <label for="regUsername" class="form-label">用户名</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="regUsername" class="form-input" placeholder="请输入用户名" required>
+                        </div>
+                    </div>
+                    
+                    <!-- 密码输入 -->
+                    <div class="form-group">
+                        <label for="regPassword" class="form-label">密码</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="regPassword" class="form-input" placeholder="请输入密码" required>
+                            <button type="button" class="toggle-password" onclick="toggleRegPassword()">👁️</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 确认密码输入 -->
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">确认密码</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="confirmPassword" class="form-input" placeholder="请再次输入密码" required>
+                            <button type="button" class="toggle-password" onclick="toggleConfirmPassword()">👁️</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 注册按钮 -->
+                    <button type="submit" class="login-btn">注册</button>
+                    
+                    <!-- 其他登录方式 -->
+                    <div class="other-login">
+                        <div class="divider">
+                            <span>其他注册方式</span>
+                        </div>
+                        <div class="login-icons">
+                            <a href="#" class="login-icon" onclick="otherRegister('phone')">📱</a>
+                            <a href="#" class="login-icon" onclick="otherRegister('wechat')">💬</a>
+                            <a href="#" class="login-icon" onclick="otherRegister('qq')">🔍</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer" style="position: fixed; bottom: 0; width: 100%;">
+        <div class="footer-content">
+            <p>&copy; 2024 购物商城. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
